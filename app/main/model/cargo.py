@@ -8,4 +8,4 @@ class Cargo(db.Model):
     id_cargo = db.Column(db.Integer, primary_key=True, autoincrement=True)
     cargo = db.Column(db.String(55), unique=True, nullable=False)
     descricao = db.Column(db.String(255))
-    colaboradores = db.relationship('Colaborador', backref='cargos', lazy=True)
+    # colaboradores = db.relationship('Colaborador', backref='cargos', lazy=True)

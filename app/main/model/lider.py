@@ -6,5 +6,7 @@ class Lider(db.Model):
     __tablename__ = 'lideres'
 
     id_lider = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    matricula_lider = db.Column(db.Integer, db.ForeignKey('colaboradores.matricula'), unique=True, nullable=False)
-    colaboradores = db.relationship('Colaborador', backref='lideres', lazy=True)
+    matricula_lider = db.Column(db.Integer,
+                                # db.ForeignKey('colaboradores.matricula'),
+                                unique=True, nullable=False)
+    # colaboradores = db.relationship('Colaborador', backref='lideres', lazy=True)

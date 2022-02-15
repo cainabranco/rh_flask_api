@@ -9,14 +9,18 @@ class Colaborador(db.Model):
     matricula = db.Column(db.Integer, primary_key=True, autoincrement=True)
     nome = db.Column(db.String(255), nullable=False)
     sobrenome = db.Column(db.String(255), nullable=False)
-    id_cargo = db.Column(db.Integer, db.ForeignKey('cargos.id_cargo'), nullable=False)
-    id_lider = db.Column(db.Integer, db.ForeignKey('lideres.id_lider'))
+    id_cargo = db.Column(db.Integer,
+                         # db.ForeignKey('cargos.id_cargo'),
+                         nullable=False)
+    id_lider = db.Column(db.Integer
+                         # db.ForeignKey('lideres.id_lider')
+     )
     email = db.Column(db.String(255), unique=True, nullable=False)
     data_inclusao = db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
     status = db.Column(db.String(50), nullable=False, default='ATIVO')
     senha_hash = db.Column(db.String(100))
     salario = db.Column(db.Float(asdecimal=True), nullable=False)
-    lideres = db.relationship('Lider', backref='colaboradores', lazy=True)
+    # lideres = db.relationship('Lider', backref='colaboradores', lazy=True)
 
     @property
     def senha(self):

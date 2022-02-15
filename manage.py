@@ -25,5 +25,6 @@ def test():
     return 1
 
 
+""" Verificar motivo do comando 'python manage.py test' não executar a função 'test' """
 if __name__ == '__main__':
     run()

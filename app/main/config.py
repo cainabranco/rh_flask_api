@@ -5,7 +5,7 @@ class Config:
     SECRET_KEY = os.getenv('SECRET_KEY', 'a_chave_SUPER_secreta')
     DEBUG = False
     # Swagger
-    RESTX_MASK_SWAGGER = False
+    # RESTX_MASK_SWAGGER = False
 
 
 class DevelopmentConfig(Config):

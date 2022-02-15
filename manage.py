@@ -1,12 +1,13 @@
 import os
 import unittest
 from flask_migrate import Migrate
-
 from app.main import create_app, db
+from app import blueprint
 from app.main.model import colaborador, cargo, lider
 
 
 app = create_app(os.getenv('RH_FLASK_ENV') or 'dev')
+app.register_blueprint(blueprint=blueprint)
 app.app_context().push()
 
 migrate = Migrate(app, db)

@@ -26,7 +26,7 @@ class CargoDto:
 
 class LiderDto:
     api = Namespace('lider', description='Operações relacionadas a Lideres')
-    cargo = api.model('lider',
+    lider = api.model('lider',
                       {
                           'matricula_lider': fields.Integer(required=True)
                       })

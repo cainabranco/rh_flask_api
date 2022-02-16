@@ -8,6 +8,7 @@ blueprint = Blueprint('api', __name__)
 
 api = Api(blueprint,
           title='API DE GENTE E GESTÃO COM FASK-RESTX',
+          description='Api para gestão de pessoas, cargos e salários',
           version='1.0')
 
 api.add_namespace(colaborador_ns, path='/colaborador')
